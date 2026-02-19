@@ -126,7 +126,11 @@ img {
   padding: 1.5rem 0;
   background-color: var(--clr-dark);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
 }
+
 .header__wrapper {
   display: flex;
   flex-direction: row;
@@ -773,6 +777,7 @@ img {
   margin-top: 1rem;
 }
 .update__tags span {
+  display: flex;
   padding: 1.8rem 3.8rem;
   border: 1px solid var(--clr-dark);
   border-radius: 3rem;
@@ -780,7 +785,6 @@ img {
   font-weight: 500;
   cursor: pointer;
   transition: all 0.3s ease;
-  display: inline-block;
 }
 
 .update__tags span:hover {
@@ -806,7 +810,103 @@ img {
     grid-template-columns: 1fr;
   }
 }
+/* Contacts */
+.contact {
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  min-height: 86vh;
+  padding-top: 10rem;
+  display: flex;
+}
+.contact__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+.contact__left h2 {
+  font-size: 5rem;
+  color: var(--clr-primary);
+  margin-bottom: 5rem;
+  font-weight: 700;
+}
+.contact__left p {
+  font-size: 1.6rem;
+  margin-bottom: 7rem;
+}
+.contact__info {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+.contact__info li {
+  display: flex;
+  text-align: left;
+  gap: 1.5rem;
+  font-size: 1.5rem;
+}
+.contact__info i {
+  color: var(--clr-primary);
+  font-size: 1.8rem;
+}
+.contact__social {
+  display: flex;
+  gap: 2rem;
+}
+.contact__social a {
+  color: var(--clr-light);
+  font-size: 2.5rem;
+  transition: 0.3s;
+}
+.contact__social a:hover {
+  color: var(--clr-primary);
+}
+.contact__right form {
+  padding-top: 14rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.contact__right input,
+.contact__right textarea {
+  width: 100%;
+  padding: 2rem;
+  border: none;
+  background-color: var(--clr-light);
+  font-size: 1.4rem;
+  font-family: inherit;
+}
+.contact__right textarea {
+  height: 15rem;
+  resize: none;
+}
+.contact__right button {
+  align-self: flex-end;
+  padding: 2rem 5rem;
+  border-radius: 3rem;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+@media screen and (max-width: 520px) {
+  .contact__wrapper {
+    grid-template-columns: 1fr;
+  }
 
+  .contact__left h2 {
+    font-size: 3.5rem;
+  }
+
+  .contact__right button {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 10rem;
+  }
+}
+/* Contacts Footer */
+.footer {
+  border-top: 1px solid var(--clr-light);
+}
 /* ASSETS */
 .title h2 {
   font-size: 48px;
